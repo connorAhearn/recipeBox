@@ -1,2 +1,3 @@
 venv
 spoonacular/config.py
+*/__pycache__/*

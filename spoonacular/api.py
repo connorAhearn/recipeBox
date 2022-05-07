@@ -5,13 +5,19 @@ from config import API_KEY
 
 EXTRACT_RECIPE_API_URL = 'https://api.spoonacular.com/recipes/extract'
 
+# Adding request parameters to a URL
 def append_parameter(url, parameter_name, parameter):
     return url + '&' + parameter_name + '=' + parameter
 
-request_url = EXTRACT_RECIPE_API_URL + '?apiKey=' + API_KEY
-request_url = append_parameter(request_url, 'url', 'https://www.sipandfeast.com/pasta-alla-norcina/')
+# Main method of the module
+def get_ingredients(url):
 
-response = requests.get(request_url).json()
+    # Getting recipe info from spoonacular for the provided url
+    request_url = EXTRACT_RECIPE_API_URL + '?apiKey=' + API_KEY
+    request_url = append_parameter(request_url, 'url', url)
+    response = requests.get(request_url).json()
 
-for ingredient in response['extendedIngredients']:
-    print(ingredient['name'])
+    # Cleaning up the result & returning it
+    extended_ingredients = response['extendedIngredients']
+    basic_ingredients = [ingredient['name'] for ingredient in extended_ingredients]
+    return basic_ingredients
