@@ -1,3 +1,4 @@
 venv
 spoonacular/config.py
-*/__pycache__/*
+__pycache__
+node_modules
