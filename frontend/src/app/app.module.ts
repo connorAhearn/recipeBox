@@ -5,18 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { RecipeSubmitComponent } from './recipe-submit/recipe-submit.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { MainComponent } from './main/main.component'; 
+import { MainComponent } from './main/main.component';
+import { RecipeSubmitComponent } from './main/recipe-submit/recipe-submit.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    RecipeSubmitComponent,
-    MainComponent
+    MainComponent,
+    RecipeSubmitComponent
   ],
   imports: [
     BrowserModule,
