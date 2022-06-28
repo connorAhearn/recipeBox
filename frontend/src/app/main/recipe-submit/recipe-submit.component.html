@@ -1,1 +1,8 @@
-<p>recipe-submit works!</p>
+<div class="wrap">
+    <div class="search">
+       <input type="text" class="searchTerm" placeholder="Provide a Recipe URL" #recipe>
+       <button (click)="submit(recipe.value)" type="submit" class="searchButton">
+         <span>Submit</span>
+      </button>
+    </div>
+ </div>

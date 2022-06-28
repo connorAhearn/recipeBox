@@ -1,0 +1,6 @@
+ * Debugger is active!
+ * Debugger PIN: 881-417-067
+127.0.0.1 - - [27/Jun/2022 23:59:33] "OPTIONS /recipe/ HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2022 23:59:33] "[33mPOST /recipe/ HTTP/1.1[0m" 404 -
+127.0.0.1 - - [27/Jun/2022 23:59:33] "[33mPOST /recipe/ HTTP/1.1[0m" 404 -
+ * Detected change in '/home/connor/Programming/recipeBox/recipeBox/server/app.py', reloading
